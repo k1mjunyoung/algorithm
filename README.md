@@ -3,3 +3,4 @@
 > Algorithm collection using java
 
 1. [시간복잡도](https://github.com/k1mjunyoung/algorithm/blob/main/time_complexity.md)
+2. [디버깅](https://github.com/k1mjunyoung/algorithm/blob/main/debugging.md)
