@@ -4,3 +4,4 @@
 
 1. [시간복잡도](https://github.com/k1mjunyoung/algorithm/blob/main/time_complexity.md)
 2. [디버깅](https://github.com/k1mjunyoung/algorithm/blob/main/debugging.md)
+3. [자료구조](https://github.com/k1mjunyoung/algorithm/tree/main/DataStructure)
