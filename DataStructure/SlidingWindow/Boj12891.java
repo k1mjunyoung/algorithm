@@ -19,14 +19,15 @@ public class Boj12891 {
         StringTokenizer st;
 
         int s, p;
-        String string;
+        String dna;
         int cntA, cntC, cntG, cntT;
+        int result = 0;
 
         st = new StringTokenizer(br.readLine());
         s = Integer.parseInt(st.nextToken());
         p = Integer.parseInt(st.nextToken());
 
-        string = br.readLine();
+        dna = br.readLine();
 
         st = new StringTokenizer(br.readLine());
         cntA = Integer.parseInt(st.nextToken());
@@ -34,6 +35,43 @@ public class Boj12891 {
         cntG = Integer.parseInt(st.nextToken());
         cntT = Integer.parseInt(st.nextToken());
 
+        String dnaSnippet = "";
+        int cnt;
 
+        for (int i = 0; i <= s - p; i++) {
+            dnaSnippet = dna.substring(i, i + p);
+
+            cnt = 0;
+            for (int j = 0; j < dnaSnippet.length(); j++) {
+                if (dnaSnippet.charAt(j) == 'A')
+                    cnt++;
+            }
+            if (cntA != cnt) continue;
+
+            cnt = 0;
+            for (int j = 0; j < dnaSnippet.length(); j++) {
+                if (dnaSnippet.charAt(j) == 'C')
+                    cnt++;
+            }
+            if (cntC != cnt) continue;
+
+            cnt = 0;
+            for (int j = 0; j < dnaSnippet.length(); j++) {
+                if (dnaSnippet.charAt(j) == 'G')
+                    cnt++;
+            }
+            if (cntG != cnt) continue;
+
+            cnt = 0;
+            for (int j = 0; j < dnaSnippet.length(); j++) {
+                if (dnaSnippet.charAt(j) == 'T')
+                    cnt++;
+            }
+            if (cntT != cnt) continue;
+
+            result++;
+        }
+
+        System.out.println(result);
     }
 }
